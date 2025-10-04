@@ -37,6 +37,15 @@
     "@nx/plugin:generator": {
       "skipLintChecks": true,
       "unitTestRunner": "none"
+    },
+    "@nx/js:library": {
+      "bundler": "tsc",
+      "includeBabelRc": false,
+      "linter": "none",
+      "minimal": true,
+      "publishable": false,
+      "strict": true,
+      "unitTestRunner": "none"
     }
   },
   "targetDefaults": {
