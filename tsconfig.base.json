@@ -1,13 +1,8 @@
 {
   "compilerOptions": {
-    /* --- Modern neutral base --- */
     "target": "ES2022",
     "lib": ["ES2022"],
-
-    /* --- Base URL for path aliases --- */
     "baseUrl": ".",
-
-    /* --- Output and types --- */
     "composite": true,
     "declaration": true,
     "declarationMap": true,
@@ -18,19 +13,13 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-
-    /* --- Strictness --- */
     "strict": true,
     "noImplicitReturns": true,
     "noImplicitOverride": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
-
-    /* --- Advanced --- */
     "noEmitOnError": true,
-
-    /* --- Path aliases --- */
     "paths": {
       "@dcdavidev/editorconfig": ["libs/editorconfig/src/index.ts"]
     }
