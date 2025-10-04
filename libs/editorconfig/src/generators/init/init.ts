@@ -5,16 +5,14 @@ import { formatFiles, generateFiles, logger, Tree } from '@nx/devkit';
 import type { InitGeneratorSchema } from './schema.d.ts';
 
 /**
- * Generates a .editorconfig file inside the workspace root
+ * Generates a .editorconfig file inside the workspace
  *
  * @param tree - Nx DevKit virtual file system
  * @param options - generator options
  */
-export async function initGenerator(
-  tree: Tree,
-  options: InitGeneratorSchema = {}
-) {
-  const editorconfigPath = '.editorconfig'; // always root
+export async function initGenerator(tree: Tree, options: InitGeneratorSchema) {
+  const targetDir = ''; // root of the workspace
+  const editorconfigPath = path.join(targetDir, '.editorconfig');
 
   if (options.dryRun) {
     logger.info(
@@ -22,11 +20,10 @@ export async function initGenerator(
     );
   } else {
     // eslint-disable-next-line unicorn/prefer-module
-    generateFiles(tree, path.join(__dirname, 'files'), '', { tmpl: '' });
+    generateFiles(tree, path.join(__dirname, 'files'), targetDir, { tmpl: '' });
     logger.info(
       `${tree.exists(editorconfigPath) ? 'Overwritten' : 'Generated'} .editorconfig at: ${editorconfigPath}`
     );
-
     await formatFiles(tree);
   }
 }
