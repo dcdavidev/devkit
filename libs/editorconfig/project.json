@@ -1,0 +1,41 @@
+{
+  "name": "editorconfig",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/editorconfig/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/editorconfig",
+        "main": "libs/editorconfig/src/index.ts",
+        "tsConfig": "libs/editorconfig/tsconfig.lib.json",
+        "assets": [
+          "libs/editorconfig/*.md",
+          {
+            "input": "./libs/editorconfig/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/editorconfig/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/editorconfig",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/editorconfig",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

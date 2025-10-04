@@ -29,6 +29,21 @@
       "linter": "none",
       "publishable": false,
       "skipLintChecks": true
+    },
+    "@nx/plugin:executor": {
+      "skipLintChecks": true,
+      "unitTestRunner": "none"
+    },
+    "@nx/plugin:generator": {
+      "skipLintChecks": true,
+      "unitTestRunner": "none"
+    }
+  },
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   }
 }
