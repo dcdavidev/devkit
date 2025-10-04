@@ -20,6 +20,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noEmitOnError": true,
-    "paths": {}
+    "paths": {
+      "@dcdavidev/cspell-config": ["libs/cspell-config/src/index.ts"]
+    }
   }
 }
