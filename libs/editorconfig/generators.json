@@ -1,8 +1,0 @@
-{
-  "generators": {
-    "init": {
-      "factory": "./src/generators/init/init",
-      "description": "editorconfig init generator"
-    }
-  }
-}

@@ -20,8 +20,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noEmitOnError": true,
-    "paths": {
-      "@dcdavidev/editorconfig": ["libs/editorconfig/src/index.ts"]
-    }
+    "paths": {}
   }
 }
