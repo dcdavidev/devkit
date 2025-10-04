@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "Init",
+  "title": "EditorConfig Init Generator Schema",
+  "description": "Schema for the init generator that creates a .editorconfig file in the workspace root",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the generator or project context (used in templates)",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?"
+    },
+    "overwrite": {
+      "type": "boolean",
+      "description": "Whether to overwrite an existing .editorconfig file if it exists",
+      "default": false,
+      "x-prompt": "Do you want to overwrite an existing .editorconfig file if present?"
+    },
+    "directory": {
+      "type": "string",
+      "description": "Optional subdirectory inside the workspace where the .editorconfig will be generated",
+      "default": "",
+      "x-prompt": "Do you want to generate the .editorconfig in a subdirectory? Leave empty for root"
+    }
+  },
+  "required": ["name"]
+}
