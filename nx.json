@@ -3,7 +3,7 @@
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": ["default"],
-    "sharedGlobals": []
+    "sharedGlobals": ["{workspaceRoot}/LICENSE"]
   },
   "plugins": [
     {
@@ -20,5 +20,15 @@
         }
       }
     }
-  ]
+  ],
+  "generators": {
+    "@nx/plugin:plugin": {
+      "compiler": "tsc",
+      "e2eTestRunner": "none",
+      "unitTestRunner": "none",
+      "linter": "none",
+      "publishable": false,
+      "skipLintChecks": true
+    }
+  }
 }
