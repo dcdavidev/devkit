@@ -88,7 +88,7 @@ npx cspell lint --config dist/libs/cspell-config/index.js .
 
 ---
 
-## License
+## 📄 License
 
 [MIT](./LICENSE) © [dcdavidev](https://github.com/dcdavidev)
 

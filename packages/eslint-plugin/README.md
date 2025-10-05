@@ -87,7 +87,7 @@ eslint --plugin ./dist/index.js "**/*.{ts,js,tsx,jsx,md,json}"
 
 ---
 
-## License
+## 📄 License
 
 [MIT](./LICENSE) © [dcdavidev](https://github.com/dcdavidev)
 

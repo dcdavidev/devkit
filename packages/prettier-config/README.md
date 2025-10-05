@@ -75,7 +75,7 @@ For VSCode, ensure the [Prettier extension](https://marketplace.visualstudio.com
 
 ---
 
-## License
+## 📄 License
 
 [MIT](./LICENSE) © [dcdavidev](https://github.com/dcdavidev)
 

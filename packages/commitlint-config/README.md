@@ -96,7 +96,7 @@ commit-msg:
 
 ---
 
-## License
+## 📄 License
 
 [MIT](./LICENSE) © [dcdavidev](https://github.com/dcdavidev)
 
