@@ -2,7 +2,7 @@
   "name": "@dcdavidev/prettier-config",
   "version": "0.15.0",
   "private": false,
-  "description": "@dcdavidev prettier config",
+  "description": "@dcdavidev Prettier config",
   "keywords": [
     "prettier",
     "prettier-config",
