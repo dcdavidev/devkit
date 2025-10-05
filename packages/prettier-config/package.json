@@ -1,0 +1,96 @@
+{
+  "name": "@dcdavidev/prettier-config",
+  "version": "0.5.0",
+  "private": false,
+  "description": "@dcdavidev prettier config",
+  "keywords": [
+    "prettier",
+    "prettier-config",
+    "sh",
+    "bash",
+    "shell",
+    "package-json",
+    "packagejson",
+    "properties",
+    "prisma",
+    "toml"
+  ],
+  "homepage": "https://github.com/dcdavidev/devkit/blob/main/packages/prettier-config/README.md",
+  "bugs": {
+    "url": "https://github.com/dcdavidev/devkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcdavidev/devkit.git",
+    "directory": "packages/prettier-config"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@dcdavidev/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "prettier-plugin-ini": "^1.3.0",
+    "prettier-plugin-packagejson": "^2.5.19",
+    "prettier-plugin-prisma": "^5.0.0",
+    "prettier-plugin-properties": "^0.3.0",
+    "prettier-plugin-sh": "^0.18.0",
+    "prettier-plugin-toml": "^2.0.6",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.9",
+    "tsdown": "^0.15.6"
+  },
+  "peerDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "nx": {
+    "name": "prettier-config",
+    "tags": [
+      "scope:tool",
+      "tool:prettier"
+    ],
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "{projectRoot}",
+          "parallel": false,
+          "commands": [
+            "tsdown",
+            "tsc -p tsconfig.lib.json"
+          ],
+          "outputs": [
+            "{projectRoot}/dist"
+          ]
+        }
+      },
+      "watch": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "{projectRoot}",
+          "commands": [
+            "tsdown --watch"
+          ]
+        }
+      }
+    }
+  }
+}

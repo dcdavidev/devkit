@@ -8,4 +8,5 @@ export const words = [
   'gopath',
   'ipynb',
   'hiberfil',
+  'esbenp',
 ];
