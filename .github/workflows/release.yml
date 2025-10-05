@@ -23,14 +23,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
-          registry-url: "https://registry.npmjs.org"
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm install --ignore-scripts
 
       - name: Build workspace
-        run: nx run-many -t build --tui false
+        run: npx nx run-many -t build --tui false
 
       - name: Dry-run release
         shell: bash
