@@ -84,7 +84,7 @@ Format:
 
 Examples:
 
-- `feat(cspell-confug): add rate limiting`
+- `feat(cspell-config): add rate limiting`
 - `fix(eslint-plugin): resolve token refresh bug`
 - `chore: update GitHub Actions workflow`
 
