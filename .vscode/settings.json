@@ -173,6 +173,15 @@
     {
       "fileMatch": [".prettierrc", ".prettierrc.json"],
       "url": "https://json.schemastore.org/prettierrc"
+    },
+    {
+      "fileMatch": [
+        "lefthook.json",
+        ".lefthook.json",
+        ".config/lefthook.json",
+        "lefthook/*.json"
+      ],
+      "url": "https://raw.githubusercontent.com/evilmartians/lefthook/refs/heads/master/schema.json"
     }
   ],
   "yaml.schemas": {
@@ -180,6 +189,20 @@
       ".github/workflows/*.yml",
       ".github/workflows/*.yaml"
     ],
-    "https://json.schemastore.org/pnpm-workspace.json": ["pnpm-workspace.yaml"]
+    "https://json.schemastore.org/pnpm-workspace.json": ["pnpm-workspace.yaml"],
+    "https://raw.githubusercontent.com/evilmartians/lefthook/refs/heads/master/schema.json": [
+      "lefthook.yml",
+      ".lefthook.yml",
+      ".config/lefthook.yml",
+      "lefthook.yaml",
+      ".lefthook.yaml",
+      ".config/lefthook.yaml",
+      "lefthook/*.yml",
+      "lefthook/*.yaml",
+      "lefthook.toml",
+      ".lefthook.toml",
+      ".config/lefthook.toml",
+      "lefthook/*.toml"
+    ]
   }
 }

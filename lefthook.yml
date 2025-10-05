@@ -1,28 +1,7 @@
-commit-msg:
-  commands:
-    lint-commit-msg:
-      run: npx commitlint --verbose --edit {1}
-
-pre-commit:
-  follow: true
-  parallel: false
-  jobs:
-    - name: lint and format staged files
-      interactive: true
-      group:
-        piped: true
-        jobs:
-          - run: npx eslint --fix {staged_files}
-            exclude:
-              - '*.sh'
-              - '*.toml'
-              - '*.yaml'
-              - '*.yml'
-            stage_fixed: true
-          - run: npx prettier {staged_files} --write
-            glob:
-              - '*.sh'
-              - '*.toml'
-              - '*.yaml'
-              - '*.yml'
-            stage_fixed: true
+remotes:
+  - git_url: git@github.com:dcdavidev/devkit
+    refetch: true
+    refetch_frequency: "24h"
+    configs:
+      - lefthook/commit-msg.yml
+      - lefthook/pre-commit.yml

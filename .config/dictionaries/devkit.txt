@@ -1,4 +1,0 @@
-dcdavidev
-dotenvx
-tabler
-vuoto

@@ -2,17 +2,42 @@
   "name": "@dcdavidev/source",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://github.com/dcdavidev/devkit#readme",
+  "bugs": {
+    "url": "https://github.com/dcdavidev/devkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcdavidev/devkit.git"
+  },
   "license": "MIT",
-  "scripts": {},
+  "workspaces": [
+    "apps/*",
+    "libs/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "nx run-many -t build",
+    "build:nx-tools": "nx run-many -t build --projects=\"tag:scope:nx-tool\"",
+    "build:tools": "nx run-many -t build --projects=\"tag:scope:tool\"",
+    "commit": "npx cz",
+    "prepare": "lefthook install"
+  },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-git"
     }
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/types": "^20.0.0",
+    "@cspell/cspell-types": "^9.2.1",
     "@cspell/eslint-plugin": "^9.2.1",
+    "@dcdavidev/commitlint-config": "^0.15.0",
+    "@dcdavidev/cspell-config": "^0.15.0",
+    "@dcdavidev/eslint-plugin": "^0.15.0",
+    "@dcdavidev/prettier-config": "^0.15.0",
     "@dcdavidev/vuoto": "^0.2.4",
     "@eslint/js": "^9.37.0",
     "@eslint/json": "^0.13.2",
@@ -22,18 +47,20 @@
     "@nx/js": "21.6.3",
     "@nx/plugin": "^21.6.3",
     "@nx/workspace": "^21.6.3",
-    "@swc-node/register": "~1.9.1",
-    "@swc/cli": "~0.6.0",
-    "@swc/core": "~1.5.7",
-    "@swc/helpers": "~0.5.11",
+    "@swc-node/register": "^1.11.1",
+    "@swc/cli": "^0.7.8",
+    "@swc/core": "^1.13.5",
+    "@swc/helpers": "^0.5.17",
     "@types/node": "20.19.9",
     "commitizen": "^4.3.1",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
     "cspell": "^9.2.1",
     "cz-conventional-changelog": "^3.3.0",
+    "cz-git": "^1.12.0",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jsdoc": "^60.8.0",
+    "eslint-plugin-jsdoc": "^60.8.1",
     "eslint-plugin-node-dependencies": "^1.1.2",
     "eslint-plugin-package-json": "^0.56.3",
     "eslint-plugin-prettier": "^5.5.4",
@@ -51,6 +78,7 @@
     "prettier-plugin-properties": "^0.3.0",
     "prettier-plugin-sh": "^0.18.0",
     "prettier-plugin-toml": "^2.0.6",
+    "tsdown": "^0.15.6",
     "tslib": "^2.8.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.45.0"

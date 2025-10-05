@@ -1,0 +1,106 @@
+{
+  "name": "@dcdavidev/eslint-plugin",
+  "version": "0.15.0",
+  "private": false,
+  "description": "@dcdavidev ESLint plugin",
+  "keywords": [
+    "eslint",
+    "eslint-plugin"
+  ],
+  "homepage": "https://github.com/dcdavidev/devkit/blob/main/packages/eslint-plugin/README.md",
+  "bugs": {
+    "url": "https://github.com/dcdavidev/devkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcdavidev/devkit.git",
+    "directory": "packages/eslint-plugin"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@dcdavidev/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@cspell/eslint-plugin": "^9.2.1",
+    "@dcdavidev/vuoto": "^0.2.4",
+    "@eslint/js": "^9.37.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsdoc": "^60.8.1",
+    "eslint-plugin-node-dependencies": "^1.1.2",
+    "eslint-plugin-package-json": "^0.56.3",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "eslint-plugin-vuoto": "^0.1.6",
+    "globals": "^16.4.0",
+    "jsonc-eslint-parser": "^2.4.1",
+    "tslib": "^2.3.0",
+    "typescript-eslint": "^8.45.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.9",
+    "tsdown": "^0.15.6"
+  },
+  "peerDependencies": {
+    "cspell": "^9.2.1",
+    "eslint": "^9.37.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "nx": {
+    "name": "eslint-plugin",
+    "tags": [
+      "scope:tool",
+      "tool:eslint"
+    ],
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "inputs": [
+          "production"
+        ],
+        "outputs": [
+          "{projectRoot}/dist"
+        ],
+        "options": {
+          "cwd": "{projectRoot}",
+          "parallel": false,
+          "commands": [
+            "tsdown",
+            "tsc -p tsconfig.lib.json"
+          ]
+        }
+      },
+      "watch": {
+        "executor": "nx:run-commands",
+        "inputs": [
+          "default"
+        ],
+        "options": {
+          "cwd": "{projectRoot}",
+          "commands": [
+            "tsdown --watch"
+          ]
+        }
+      }
+    }
+  }
+}

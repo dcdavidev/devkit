@@ -1,0 +1,88 @@
+{
+  "name": "@dcdavidev/commitlint-config",
+  "version": "0.15.0",
+  "private": false,
+  "description": "@dcdavidev Commitlint config",
+  "keywords": [
+    "commitlint",
+    "commitlint-config"
+  ],
+  "homepage": "https://github.com/dcdavidev/devkit/blob/main/packages/commitlint-config/README.md",
+  "bugs": {
+    "url": "https://github.com/dcdavidev/devkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcdavidev/devkit.git",
+    "directory": "packages/commitlint-config"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@dcdavidev/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/types": "^20.0.0",
+    "tsdown": "^0.15.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "nx": {
+    "name": "commitlint-config",
+    "tags": [
+      "scope:tool",
+      "tool:commitlint"
+    ],
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "inputs": [
+          "production"
+        ],
+        "outputs": [
+          "{projectRoot}/dist"
+        ],
+        "options": {
+          "cwd": "{projectRoot}",
+          "parallel": false,
+          "commands": [
+            "tsdown",
+            "tsc -p tsconfig.lib.json"
+          ]
+        }
+      },
+      "watch": {
+        "executor": "nx:run-commands",
+        "inputs": [
+          "default"
+        ],
+        "options": {
+          "cwd": "{projectRoot}",
+          "commands": [
+            "tsdown --watch"
+          ]
+        }
+      }
+    }
+  }
+}

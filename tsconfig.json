@@ -4,7 +4,16 @@
   "files": [],
   "references": [
     {
-      "path": "./libs/editorconfig"
+      "path": "./packages/cspell-config"
+    },
+    {
+      "path": "./packages/prettier-config"
+    },
+    {
+      "path": "./packages/eslint-plugin"
+    },
+    {
+      "path": "./packages/commitlint-config"
     }
   ]
 }
