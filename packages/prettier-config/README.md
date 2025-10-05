@@ -43,16 +43,6 @@ npm install -D prettier @telarteth/prettier-config
 
 Create a `.prettierrc.mjs` file at your project root:
 
-```ts
-import telartethConfig from '@telarteth/prettier-config';
-
-/** @type {import("prettier").Config} */
-const config = {
-  ...telartethConfig,
-};
-
-export default config;
-```
 
 ### Editor integration
 
