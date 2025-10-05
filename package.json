@@ -32,6 +32,7 @@
     "@commitlint/types": "^20.0.0",
     "@cspell/cspell-types": "^9.2.1",
     "@cspell/eslint-plugin": "^9.2.1",
+    "@dcdavidev/commitlint-config": "^0.15.0",
     "@dcdavidev/cspell-config": "^0.15.0",
     "@dcdavidev/eslint-plugin": "^0.15.0",
     "@dcdavidev/prettier-config": "^0.15.0",
