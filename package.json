@@ -2,13 +2,25 @@
   "name": "@dcdavidev/source",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://github.com/dcdavidev/devkit#readme",
+  "bugs": {
+    "url": "https://github.com/dcdavidev/devkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcdavidev/devkit.git"
+  },
   "license": "MIT",
   "workspaces": [
     "apps/*",
     "libs/*",
     "packages/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "build": "nx run-many -t build",
+    "build:nx-tools": "nx run-many -t build --projects=\"tag:scope:nx-tool\"",
+    "build:tools": "nx run-many -t build --projects=\"tag:scope:tool\""
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -17,7 +29,9 @@
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
+    "@cspell/cspell-types": "^9.2.1",
     "@cspell/eslint-plugin": "^9.2.1",
+    "@dcdavidev/cspell-config": "^0.5.0",
     "@dcdavidev/vuoto": "^0.2.4",
     "@eslint/js": "^9.37.0",
     "@eslint/json": "^0.13.2",
