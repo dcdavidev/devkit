@@ -87,9 +87,9 @@ eslint --plugin ./dist/index.js "**/*.{ts,js,tsx,jsx,md,json}"
 
 ---
 
-## 🕯️ License
+## License
 
 [MIT](./LICENSE) © [dcdavidev](https://github.com/dcdavidev)
 
 > “To define a rule is to shape behavior.
-> To enforce a rule is to summon order from chaos.” — dcdavidev ESLint Codex, Vol. I
+> To enforce a rule is to summon order from chaos.” — _dcdavidev ESLint Codex, Vol. I_

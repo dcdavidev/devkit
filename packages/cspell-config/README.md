@@ -88,9 +88,9 @@ npx cspell lint --config dist/libs/cspell-config/index.js .
 
 ---
 
-## 🕯️ License
+## License
 
 [MIT](./LICENSE) © [dcdavidev](https://github.com/dcdavidev)
 
 > “To spell is to name.
-> To name is to command.” — _CSpell Grimoire, Vol. I_
+> To name is to command.” — _dcdavidev CSpell Codex, Vol. I_
