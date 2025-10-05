@@ -19,12 +19,6 @@ const config: Config = {
 
   overrides: [
     {
-      files: ['*.yaml', '*.yml'],
-      options: {
-        printWidth: 80,
-      },
-    },
-    {
       files: ['*.toml'],
       options: {
         printWidth: 100,

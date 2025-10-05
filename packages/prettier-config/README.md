@@ -24,7 +24,6 @@
   - End of line: `lf`
 
 - **File-specific Overrides**
-  - **YAML (`.yaml`, `.yml`)** → Keeps `printWidth` at 80 characters.
   - **TOML (`.toml`)** → Uses wider `printWidth` of 100 characters.
 
 ---
