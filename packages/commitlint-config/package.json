@@ -37,6 +37,7 @@
   "dependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
