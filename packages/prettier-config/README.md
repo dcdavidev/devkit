@@ -1,4 +1,4 @@
-# @telarteth/prettier-config
+# @dcdavidev/prettier-config
 
 > Shared Prettier configuration — harmonizing code and text formatting across JS, TS, Markdown, YAML, TOML, Prisma, and shell scripts.  
 > Clean. Opinionated. Always consistent.
@@ -24,7 +24,6 @@
   - End of line: `lf`
 
 - **File-specific Overrides**
-  - **Markdown (`.md`, `.mdx`)** → Uses `markdown` parser.
   - **YAML (`.yaml`, `.yml`)** → Keeps `printWidth` at 80 characters.
   - **TOML (`.toml`)** → Uses wider `printWidth` of 100 characters.
 
@@ -34,7 +33,7 @@
 
 ```bash
 npm install --global prettier
-npm install -D prettier @telarteth/prettier-config
+npm install -D prettier @dcdavidev/prettier-config
 ```
 
 ---
@@ -43,6 +42,18 @@ npm install -D prettier @telarteth/prettier-config
 
 Create a `.prettierrc.mjs` file at your project root:
 
+```js
+import dcdavidevConfig from '@dcdavidev/prettier-config';
+
+/**
+ * @type {import("prettier").Config}
+ */
+const config = {
+  ...dcdavidevConfig,
+};
+
+export default config;
+```
 
 ### Editor integration
 

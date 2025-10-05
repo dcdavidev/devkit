@@ -19,12 +19,6 @@ const config: Config = {
 
   overrides: [
     {
-      files: ['*.md', '*.mdx'],
-      options: {
-        parser: 'markdown',
-      },
-    },
-    {
       files: ['*.yaml', '*.yml'],
       options: {
         printWidth: 80,

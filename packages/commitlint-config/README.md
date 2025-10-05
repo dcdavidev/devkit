@@ -1,4 +1,4 @@
-# @telarteth/commitlint-config
+# @dcdavidev/commitlint-config
 
 > Shared Commitlint configuration — standardizing commit message formatting across JS/TS projects.  
 > Conventional commits, interactive prompts, and multi-scope support included.  

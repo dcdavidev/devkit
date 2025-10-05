@@ -15,7 +15,7 @@ import { rulesJavascript } from './rules/javascript.js';
 
 export const configJavascript: Linter.Config[] = defineConfig([
   {
-    files: ['**/**.{js,ts,cjs,cts,mjs,mts,jsx,tsx'],
+    files: ['**/*.{js,ts,mjs,mts,jsx,tsx}'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -40,7 +40,7 @@ export const configJavascript: Linter.Config[] = defineConfig([
     },
   },
   {
-    files: ['**/**.{cjs,cts}'],
+    files: ['**/*.{cjs,cts}'],
     languageOptions: {
       globals: {
         ...globals.commonjs,
@@ -54,8 +54,9 @@ export const configJavascript: Linter.Config[] = defineConfig([
     ],
   },
   {
-    files: ['**/*.{js,tsm,mjs,mts,jsx,tsx}'],
+    files: ['**/*.{js,ts,mjs,mts,jsx,tsx}'],
     languageOptions: {
+      sourceType: 'module',
       globals: {
         ...globals.es2022,
       },

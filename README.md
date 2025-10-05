@@ -31,7 +31,7 @@ No lock-in. No boilerplate. Just clean code and aligned conventions.
 | Package                                                        | Description                                                                              |
 | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | [`@dcdavidev/eslint-plugin`](./packages/eslint-plugin)         | Modular ESLint setup for JS, TS, JSON, and Markdown — strict, typed, and monorepo-ready. |
-| [`@telarteth/prettier-config`](./packages/prettier-config)     | Shared Prettier configuration for uniform formatting across multiple file types.         |
+| [`@dcdavidev/prettier-config`](./packages/prettier-config)     | Shared Prettier configuration for uniform formatting across multiple file types.         |
 | [`@dcdavidev/cspell-config`](./packages/cspell-config)         | CSpell configuration with smart dictionaries and build artifacts exclusion.              |
 | [`@dcdavidev/commitlint-config`](./packages/commitlint-config) | Commitlint setup enforcing Conventional Commits and providing interactive prompts.       |
 | [`@dcdavidev/lefthook`](./lefthook)                            | Pre-configured Lefthook hooks for commit validation, linting, and formatting.            |
