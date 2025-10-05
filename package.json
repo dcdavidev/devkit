@@ -19,7 +19,9 @@
   "scripts": {
     "build": "nx run-many -t build",
     "build:nx-tools": "nx run-many -t build --projects=\"tag:scope:nx-tool\"",
-    "build:tools": "nx run-many -t build --projects=\"tag:scope:tool\""
+    "build:tools": "nx run-many -t build --projects=\"tag:scope:tool\"",
+    "commit": "npx cz",
+    "prepare": "lefthook install"
   },
   "config": {
     "commitizen": {
