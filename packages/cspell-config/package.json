@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@cspell/cspell-types": "^9.2.1",
-    "@types/node": "^24.6.2",
+    "@types/node": "^24.7.0",
     "tsdown": "^0.15.6"
   },
   "peerDependencies": {

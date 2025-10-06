@@ -52,7 +52,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@types/node": "^24.6.2",
+    "@types/node": "^24.7.0",
     "tsdown": "^0.15.6"
   },
   "peerDependencies": {
